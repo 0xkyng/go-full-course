@@ -1,16 +1,101 @@
 package main
 
-import (
-	"fmt"
-	"path"
-)
+
+
 
 func main() {
-	dir, _ := path.Split("desktop/go-full-course")
-	fmt.Println(dir)
+
+	
+	// name := os.Args[1]
+	// fmt.Println(strings.ToLower(os.Args[1]))
+	
+//---------------------------------------------------
+// EXERCISE: Raw Concat
+//
+//  1. Initialize the name variable
+//     by getting input from the command line
+//
+//  2. Use concatenation operator to concatenate it
+//     with the raw string literal below
+//
+// NOTE
+//  You should concatenate the name variable in the correct
+//  place.
+//
+// EXPECTED OUTPUT
+//  Let's say that you run the program like this:
+//   go run main.go inanç
+//
+//  Then it should output this:
+//   hi inanç!
+//   how are you?
+
+	// name := os.Args[1]
+
+	// replace and concatenate the `name` variable
+	// after `hi ` below
+	// fmt.Println(name)
+
+	// msg := `Hi`  +  name  + `! how are you?`
+
+	// fmt.Println(msg)
+	// ---------------------------------------------------------
+
+	// HINTS:
+	// \t equals to TAB character
+	// \n equals to newline character
+	// \" equals to double-quotes character
+
+	// json := `
+	// {
+	// 	"items":
+	// 	[{
+	// 		"item":
+	// 		{
+	// 			"name": "Isaac Tee"
+
+	// 		}
+	// 	}]
+	// }
+	// `
+	// fmt.Println(json)
+
+	// HINTS:
+	// \t equals to TAB character
+	// \n equals to newline character
+	// \" equals to double-quotes character
+
+	// json := "\n" +
+	// 	"{\n" +
+	// 	"\t\"Items\": [{\n" +
+	// 	"\t\t\"Item\": {\n" +
+	// 	"\t\t\t\"name\": \"Teddy Bear\"\n" +
+	// 	"\t\t}\n" +
+	// 	"\t}]\n" +
+	// 	"}\n"
+
+	// fmt.Println(json)
+
+	// 	path := `c:\\program files\\duper super\\fun.txt\ 
+	// 	c:\\program files\\really\\funny.png`
+		
+	// fmt.Println(path)
+
+	// msg := os.Args[1]
+	// l := len(msg)
+
+	// s := msg + strings.Repeat("!", l)
+	// s = strings.ToUpper(s)
+
+	// fmt.Println(s)
 
 
-	// ? ?= path.Split("secret/file.txt")
+
+    // counting in strings
+	// utf8.RuneCountInString(name)
+
+	// dir, _ := path.Split("desktop/go-full-course")
+	// fmt.Println(dir)
 
 	// red, blue := "red", "blue"
 	// red, blue = blue, red
