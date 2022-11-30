@@ -1,14 +1,271 @@
 package main
 
-import (
-	"fmt"
-	"os"
-	"strconv"
-)
-
-
 
 func main() {
+
+	/////////////////////////////////////////////////////////////////////////////////////////////
+	// HANDLING ERROR EXERCISES
+	// 1. RATINGS MOVIE
+
+	//  1. Get the age from the command-line.
+	//
+	//  2. Return one of the following messages if the age is:
+	//     -> Above 17         : "R-Rated"
+	//     -> Between 13 and 17: "PG-13"
+	//     -> Below 13         : "PG-Rated"
+	//
+	// RESTRICTIONS:
+	//  1. If age data is wrong or absent let the user know.
+	//  2. Do not accept negative age.
+	//
+	// BONUS:
+	//  1. BONUS: Use if statements only twice throughout your program.
+	//  2. BONUS: Use an if statement only once.
+	//
+	// EXPECTED OUTPUT
+	//  go run main.go 18
+	//    R-Rated
+	//
+	//  go run main.go 17
+	//    PG-13
+	//
+	//  go run main.go 12
+	//    PG-Rated
+	//
+	//  go run main.go
+	//    Requires age
+	//
+	//  go run main.go -5
+	//    Wrong age: "-5"
+
+	// if len(os.Args) != 2 {
+	// 	fmt.Printf("Requires age")
+	// 	return
+	// }
+
+	// age, err := strconv.Atoi(os.Args[1])
+
+	// if err != nil || age < 0 {
+	// 	fmt.Printf(`wrong age: %q` +"\n", os.Args[1])
+	// } else if age > 17 {
+	// 	fmt.Printf("R-RATED")
+	// } else if age >= 13 && age <= 17 {
+	// 	fmt.Printf("PG-13")
+	// }else if age < 13 {
+	// 	fmt.Printf("PG-RATED")
+	// }
+
+	// 2
+	// EXERCISE: Odd or Even
+	//
+	//  1. Get a number from the command-line.
+	//
+	//  2. Find whether the number is odd, even and divisible by 8.
+	//
+	// RESTRICTION
+	//  Handle the error. If the number is not a valid number,
+	//  or it's not provided, let the user know.
+	//
+	// EXPECTED OUTPUT
+	//  go run main.go 16
+	//    16 is an even number and it's divisible by 8
+	//
+	//  go run main.go 4
+	//    4 is an even number
+	//
+	//  go run main.go 3
+	//    3 is an odd number
+	//
+	//  go run main.go
+	//    Pick a number
+	//
+	//  go run main.go ABC
+	//    "ABC" is not a number
+
+	// if len(os.Args) != 2 {
+	// 	fmt.Printf("Pick a number")
+	// 	return
+	// }
+
+	// n, err := strconv.Atoi(os.Args[1])
+	// if err != nil {
+	// 	fmt.Printf("%d is not a number\n", n)
+	// 	return
+	// }
+
+	// if n%8 == 0 {
+	// 	fmt.Printf("%d is not an even number and it's divisible by 8\n", n)
+	// } else if n%2 ==0 {
+	// 	fmt.Printf("%d is an even number\n", n)
+	// } else {
+	// 	fmt.Printf("5d is an odd number")
+	// }
+
+	// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	//. 3
+	// EXERCISE: Leap Year
+	//
+	//  Find out whether a given year is a leap year or not.
+	//
+	// EXPECTED OUTPUT
+	//  go run main.go
+	//    Give me a year number
+	//
+	//  go run main.go eighties
+	//    "eighties" is not a valid year.
+	//  go run main.go 2018
+	//    2018 is not a leap year.
+	//
+	//  go run main.go 2100
+	//    2100 is not a leap year.
+	//
+	//  go run main.go 2019
+	//    2019 is not a leap year.
+	//
+	//  go run main.go 2020
+	//    2020 is a leap year.
+	//
+	//  go run main.go 2024
+	//    2024 is a leap year.
+
+	// if len(os.Args) != 2 {
+	// 	fmt.Printf("Give me a year number")
+	// 	return
+	// }
+
+	// year, err := strconv.Atoi(os.Args[1])
+	// if err != nil {
+	// 	fmt.Printf("%q is not a valid year\n", os.Args[1])
+	// 	return
+	// }
+
+	// var leap bool
+	// if year%400 == 0 {
+	// 	leap = true
+	// } else if year%100 == 0 {
+	// 	leap =false
+	// } else if year%4 == 0{
+	// 	leap = true
+	// }
+
+	// if leap {
+	// 	fmt.Printf("%d is a leap yaer.\n", year)
+	// } else {
+	// 	fmt.Printf("%d is not a leap.\n", year)
+	// }
+	// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+	//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+	// 4.
+	// EXERCISE: Days in a Month
+	//
+	//  Print the number of days in a given month.
+	//
+	// RESTRICTIONS
+	//  1. On a leap year, february should print 29. Otherwise, 28.
+	//
+	//     Set your computer clock to 2020 to see whether it works.
+	//
+	//  2. It should work case-insensitive. See below.
+	//
+	//     Search on Google: golang pkg strings ToLower
+	//
+	//  3. Get the current year using the time.Now()
+	//
+	//     Search on Google: golang pkg time now year
+	//
+	//
+	// EXPECTED OUTPUT
+	//
+	//  -----------------------------------------
+	//  Your solution should not accept invalid months
+	//  -----------------------------------------
+	//  go run main.go
+	//    Give me a month name
+	//
+	//  go run main.go sheep
+	//    "sheep" is not a month.
+	//
+	//  -----------------------------------------
+	//  Your solution should handle the leap years
+	//  -----------------------------------------
+	//  go run main.go january
+	//    "january" has 31 days.
+	//
+	//  go run main.go february
+	//    "february" has 28 days.
+	//
+	//  go run main.go march
+	//    "march" has 31 days.
+	//
+	//  go run main.go april
+	//    "april" has 30 days.
+	//
+	//  go run main.go may
+	//    "may" has 31 days.
+	//
+	//  go run main.go june
+	//    "june" has 30 days.
+	//
+	//  go run main.go july
+	//    "july" has 31 days.
+	//
+	//  go run main.go august
+	//    "august" has 31 days.
+	//
+	//  go run main.go september
+	//    "september" has 30 days.
+	//
+	//  go run main.go october
+	//    "october" has 31 days.
+	//
+	//  go run main.go november
+	//    "november" has 30 days.
+	//
+	//  go run main.go december
+	//    "december" has 31 days.
+	//
+	//  -----------------------------------------
+	//  Your solution should be case insensitive
+	//  -----------------------------------------
+	//  go run main.go DECEMBER
+	//    "DECEMBER" has 31 days.
+	//
+	//  go run main.go dEcEmBeR
+	//    "dEcEmBeR" has 31 days.
+
+	// if len(os.Args) != 2 {
+	// 	fmt.Printf("Give me a month name")
+	// 	return
+	// }
+
+	// // Get the current time and find out whether it is a leap year
+	// year := time.Now().Year()
+	// leap := year%4 == 0 && (year%100 != 0 || year%400 == 0)
+
+	// days := 28
+	// month := os.Args[1]
+
+	// // case insensitive
+	// m := strings.ToLower(month)
+	// if m == "april" || m == "june" || m == "september" || m == "november" {
+	// 	days = 30
+	// } else if m == "january" || m == "march" || m == "may" || m == "august" || m == "october" || m == "december" {
+	// 	days = 31
+	// } else if m == "february" && leap {
+	// 	if leap {
+	// 		days = 29
+	// 	}
+	// } else {
+	// 	fmt.Printf("%q is not a month.\n", month)
+	// 	return
+	// }
+
+	// fmt.Printf("%q has %d days.\n", month, days)
+	//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////
+
 	//------------------------------------------
 	// ERROR HANDLING
 	// age := os.Args[1]
@@ -30,8 +287,7 @@ func main() {
 	// meters := feet * 0.3048
 	// fmt.Printf(" %g feet is %g converted to meters\n", feet, meters)
 
-
-   //-------------------------------------------
+	//-------------------------------------------
 
 	//--------------------------------------------------------------
 	// const (
@@ -82,75 +338,75 @@ func main() {
 	//---------------------------------------------------------
 
 	// ---------------------------------------------------------
-// EXERCISE: Arg Count
-//
-//  1. Get arguments from command-line.
-//  2. Print the expected outputs below depending on the number
-//     of arguments.
-//
-// EXPECTED OUTPUT
-//  go run main.go
-//    Give me args
-//
-//  go run main.go hello
-//    There is one: "hello"
-//
-//  go run main.go hi there
-//    There are two: "hi there"
-//
-//  go run main.go I wanna be a gopher
-//    There are 5 arguments
-// ---------------------------------------------------------
-// 	var (
-// 		args = os.Args
-// 		l = len(args) - 1
-// 	)
-	
-// if l == 0 {
-// 	fmt.Printf("Give me args")
-// } else if l == 1 {
-// 	fmt.Printf("There is one: %q\n", args[1])
-// } else if l == 2 {
-// 	fmt.Printf(
-// 		`There are two: "%s %s"`+"\n",
-// 		args[1], args[2],
-// 	)
-// } else {
-// 	fmt.Printf("There are %d arguments\n", 1)
-// }
+	// EXERCISE: Arg Count
+	//
+	//  1. Get arguments from command-line.
+	//  2. Print the expected outputs below depending on the number
+	//     of arguments.
+	//
+	// EXPECTED OUTPUT
+	//  go run main.go
+	//    Give me args
+	//
+	//  go run main.go hello
+	//    There is one: "hello"
+	//
+	//  go run main.go hi there
+	//    There are two: "hi there"
+	//
+	//  go run main.go I wanna be a gopher
+	//    There are 5 arguments
+	// ---------------------------------------------------------
+	// 	var (
+	// 		args = os.Args
+	// 		l = len(args) - 1
+	// 	)
 
-// isSphere, radius := true, 200
+	// if l == 0 {
+	// 	fmt.Printf("Give me args")
+	// } else if l == 1 {
+	// 	fmt.Printf("There is one: %q\n", args[1])
+	// } else if l == 2 {
+	// 	fmt.Printf(
+	// 		`There are two: "%s %s"`+"\n",
+	// 		args[1], args[2],
+	// 	)
+	// } else {
+	// 	fmt.Printf("There are %d arguments\n", 1)
+	// }
 
-// if isSphere && radius >= 200 {
-// 	fmt.Printf("It's a big sphere.")
-// } else {
-// 	fmt.Printf("I don't know.")
-// }
+	// isSphere, radius := true, 200
 
-// EXPECTED OUTPUT
-//  If age is greater than 60, print:
-//    Getting older
-//  If age is greater than 30, print:
-//    Getting wiser
-//  If age is greater than 20, print:
-//    Adulthood
-//  If age is greater than 10, print:
-//    Young blood
-//  Otherwise, print:
-//    Booting up
+	// if isSphere && radius >= 200 {
+	// 	fmt.Printf("It's a big sphere.")
+	// } else {
+	// 	fmt.Printf("I don't know.")
+	// }
 
-// age := 10
-// if age > 60 {
-// 	fmt.Printf("Getting older")
-// } else if age > 30 {
-// 	fmt.Printf("Getting wiser")
-// } else if age > 20 {
-// 	fmt.Printf("Adulthood")
-// } else if age > 10 {
-// 	fmt.Printf("Young blood")
-// } else {
-// 	fmt.Printf("Booting up")
-// }
+	// EXPECTED OUTPUT
+	//  If age is greater than 60, print:
+	//    Getting older
+	//  If age is greater than 30, print:
+	//    Getting wiser
+	//  If age is greater than 20, print:
+	//    Adulthood
+	//  If age is greater than 10, print:
+	//    Young blood
+	//  Otherwise, print:
+	//    Booting up
+
+	// age := 10
+	// if age > 60 {
+	// 	fmt.Printf("Getting older")
+	// } else if age > 30 {
+	// 	fmt.Printf("Getting wiser")
+	// } else if age > 20 {
+	// 	fmt.Printf("Adulthood")
+	// } else if age > 10 {
+	// 	fmt.Printf("Young blood")
+	// } else {
+	// 	fmt.Printf("Booting up")
+	// }
 
 	// name, lastName := os.Args[1], os.Args[2]
 	// msg := "my name is %s and my last name is %s\n"
@@ -193,7 +449,6 @@ func main() {
 	// )
 
 	// fmt.Println(Sep, Oct, Nov)
-
 
 	// const (
 	// 	monday = iota
