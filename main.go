@@ -3,9 +3,84 @@ package main
 import (
 	"fmt"
 	"os"
+	"strconv"
 )
 
+
+
 func main() {
+	//------------------------------------------
+	// ERROR HANDLING
+	// age := os.Args[1]
+
+	// n, err := strconv.Atoi(age)
+	// if err != nil {
+	// 	fmt.Println("Error:", err)
+	// 	return
+	// }
+	// fmt.Printf("Success: Converted %q to %d.\n", age, n)
+
+	// arg := os.Args[1]
+
+	// feet, err := strconv.ParseFloat(arg, 64)
+	// if err != nil {
+	// 	fmt.Printf(`error: %q is not a number`, arg)
+	// 	return
+	// }
+	// meters := feet * 0.3048
+	// fmt.Printf(" %g feet is %g converted to meters\n", feet, meters)
+
+
+   //-------------------------------------------
+
+	//--------------------------------------------------------------
+	// const (
+	// 	usage       = "Usage: [username] [password]"
+	// 	errUser     = "Access denied for %q.\n"
+	// 	errPwd      = "Invalid password for %q.\n"
+	// 	accessOK    = "Access granted to %q.\n"
+	// 	user, user2 = "isaac", "pee"
+	// 	pass, pass2 = "2711", "1127"
+	// )
+
+	// args := os.Args
+
+	// if len(args) != 3 {
+	// 	fmt.Println(usage)
+	// 	return
+	// }
+
+	// u, p := args[1], args[2]
+
+	// if u != user && u != user2 {
+	// 	fmt.Printf(errUser, u)
+	// } else if u == user && p == pass {
+	// 	fmt.Printf(accessOK, u)
+	// } else if u == user2 && p == pass2 {
+	// 	fmt.Printf(accessOK, u)
+	// } else {
+	// 	fmt.Printf(errPwd, u)
+	// }
+	//----------------------------------------------------------
+
+	//----------------------------------------------------------
+	// args := os.Args
+	// if len(os.Args) != 3 {
+	// 	fmt.Println("Usage: [Username] [Password]")
+	// 	return
+	// }
+
+	// u, p := args[1], args[2]
+
+	// if u != "Isaac" {
+	// 	fmt.Printf("Access denied for %q\n", u)
+	// } else if p != "2711" {
+	// 	fmt.Printf("Invalid password for %q\n", u)
+	// } else {
+	// 	fmt.Printf("Access granted to %q\n", u)
+	// }
+	//---------------------------------------------------------
+
 	// ---------------------------------------------------------
 // EXERCISE: Arg Count
 //
@@ -26,23 +101,23 @@ func main() {
 //  go run main.go I wanna be a gopher
 //    There are 5 arguments
 // ---------------------------------------------------------
-	var (
-		args = os.Args
-		l = len(args) - 1
-	)
+// 	var (
+// 		args = os.Args
+// 		l = len(args) - 1
+// 	)
 	
-if l == 0 {
-	fmt.Printf("Give me args")
-} else if l == 1 {
-	fmt.Printf("There is one: %q\n", args[1])
-} else if l == 2 {
-	fmt.Printf(
-		`There are two: "%s %s"`+"\n",
-		args[1], args[2],
-	)
-} else {
-	fmt.Printf("There are %d arguments\n", 1)
-}
+// if l == 0 {
+// 	fmt.Printf("Give me args")
+// } else if l == 1 {
+// 	fmt.Printf("There is one: %q\n", args[1])
+// } else if l == 2 {
+// 	fmt.Printf(
+// 		`There are two: "%s %s"`+"\n",
+// 		args[1], args[2],
+// 	)
+// } else {
+// 	fmt.Printf("There are %d arguments\n", 1)
+// }
 
 // isSphere, radius := true, 200
 
