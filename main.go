@@ -1,7 +1,312 @@
 package main
 
+import (
+	"fmt"
+	"os"
+	"strings"
+	"time"
+)
 
 func main() {
+	/////////////////////////////////////////////////////////////////////////////////
+	// SWITCH EXERCISES
+
+	// EXERCISE: Richter Scale
+	//
+	//  1. Get the earthquake magnitude from the command-line.
+	//  2. Display its corresponding description.
+	//
+	// ---------------------------------------------------------
+	// MAGNITUDE                    DESCRIPTION
+	// ---------------------------------------------------------
+	// Less than 2.0                micro
+	// 2.0 and less than 3.0        very minor
+	// 3.0 and less than 4.0        minor
+	// 4.0 and less than 5.0        light
+	// 5.0 and less than 6.0        moderate
+	// 6.0 and less than 7.0        strong
+	// 7.0 and less than 8.0        major
+	// 8.0 and less than 10.0       great
+	// 10.0 or more                 massive
+	//
+	// EXPECTED OUTPUT
+	//  go run main.go
+	//    Give me the magnitude of the earthquake.
+	//
+	//  go run main.go ABC
+	//    I couldn't get that, sorry.
+	//
+	//  go run main.go 0.5
+	//    0.50 is micro
+	//
+	//  go run main.go 2.5
+	//    2.50 is very minor
+	//
+	//  go run main.go 3
+	//    3.00 is minor
+	//
+	//  go run main.go 4.5
+	//    4.50 is light
+	//
+	//  go run main.go 5
+	//    5.00 is moderate
+	//
+	//  go run main.go 6
+	//    6.00 is strong
+	//
+	//  go run main.go 7
+	//    7.00 is major
+	//
+	//  go run main.go 8
+	//    8.00 is great
+	//
+	//  go run main.go 11
+	//    11.00 is massive
+
+	// args := os.Args
+	// if len(args) != 2 {
+	// 	fmt.Printf("Give me the magnitude of the earthquake.")
+	// 	return
+	// }
+
+	// richter, err := strconv.ParseFloat(args[1], 64)
+	// if err != nil {
+	// 	fmt.Printf("I couldn't get that, sorry.")
+	// 	return
+	// }
+
+	// var desc string
+	// r := richter
+
+	// switch {
+	// case r < 2:
+	// 	desc = "micro"
+	// case r >= 2 && r < 3:
+	// 	desc = "very minor"
+	// case r >= 3 && r < 4:
+	// 	desc = "minor"
+	// case r >= 4 && r < 5:
+	// 	desc = "light"
+	// case r >= 5 && r < 6:
+	// 	desc = "moderate"
+	// case r >= 6 && r < 7:
+	// 	desc = "strong"
+	// case r >= 7 && r < 8:
+	// 	desc = "major"
+	// case r >= 8 && r < 9:
+	// 	desc = "great"
+	// default:
+	// 	desc = "massive"
+	// }
+	// fmt.Printf("%.2f is %s\n", richter, desc)
+	/////////////////////////////////////////////////////////////////////////////////
+
+	// ---------------------------------------------------------
+	// EXERCISE: Convert
+	//
+	//  Convert the if statement to a switch statement.
+	// ---------------------------------------------------------
+	// const (
+	// 	usage       = "Usage: [username] [password]"
+	// 	errUser     = "Access denied for %q.\n"
+	// 	errPwd      = "Invalid password for %q.\n"
+	// 	accessOK    = "Access granted to %q.\n"
+	// 	user, user2 = "jack", "inanc"
+	// 	pass, pass2 = "1888", "1879"
+	// )
+	// args := os.Args
+
+	// if len(args) != 3 {
+	// 	fmt.Println(usage)
+	// 	return
+	// }
+
+	// u, p := args[1], args[2]
+
+	//
+	// REFACTOR THIS TO A SWITCH
+	//
+	// if u != user && u != user2 {
+	// 	fmt.Printf(errUser, u)
+	// } else if u == user && p == pass {
+	// 	fmt.Printf(accessOK, u)
+	// } else if u == user2 && p == pass2 {
+	// 	fmt.Printf(accessOK, u)
+	// } else {
+	// 	fmt.Printf(errPwd, u)
+	// }
+
+	// REFACTORED INTO SWITCH
+	// switch  {
+	// 	case u != user && u != user2:
+	// 		fmt.Printf(errUser, u)
+	// 	case u == user && p == pass:
+	// 		fallthrough
+	// 	case u == user2 && p == pass2:
+	// 		fmt.Printf(accessOK, u)
+	// 	default:
+	// 		fmt.Printf(errPwd, u)
+	// }
+	//---------------------------------------------------------------------------------
+
+	//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	// EXERCISE: String Manipulator
+	//
+	//  1. Get the operation as the first argument.
+	//
+	//  2. Get the string to be manipulated as the 2nd argument.
+	//
+	// HINT
+	//  You can find the manipulation functions in the strings
+	//  package Go documentation (ToLower, ToUpper, Title).
+	//
+	// EXPECTED OUTPUT
+	//
+	//  go run main.go
+	//    [command] [string]
+	//
+	//    Available commands: lower, upper and title
+	//
+	//  go run main.go lower 'OMG!'
+	//    omg!
+	//
+	//  go run main.go upper 'omg!'
+	//    OMG!
+	//
+	//  go run main.go title "mr. charles darwin"
+	//    Mr. Charles Darwin
+	//
+	//  go run main.go genius "mr. charles darwin"
+	//    Unknown command: "genius"
+
+	// const usage = `[command] [string]
+	// Availabe commands: lower, upper and title`
+	// args := os.Args
+	// if len(os.Args) != 3 {
+	// 	fmt.Printf(usage)
+	// 	return
+	// }
+
+	// cmd, str := args[1], args[2]
+
+	// switch cmd {
+	// case "lower":
+	// 	fmt.Printf(strings.ToLower(str))
+	// case "upper":
+	// 	fmt.Println(strings.ToUpper(str))
+	// case "title":
+	// 	fmt.Println(strings.Title(str))
+	// default:
+	// 	fmt.Printf("unknown comand: %q\n", cmd)
+	// }
+	//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+	//||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+	// EXERCISE: Days in a Month
+	//
+	//  Refactor the previous exercise from the if statement
+	//  section.
+	//
+	//  "Print the number of days in a given month."
+	//
+	//  Use a switch statement instead of if statements.
+	if len(os.Args) != 2 {
+		fmt.Println("Give me a month name")
+		return
+	}
+
+	year := time.Now().Year()
+	leap := year%4 == 0 && (year%100 != 0 || year%400 == 0)
+
+	days, month := 28, os.Args[1]
+
+	// 	if m := strings.ToLower(month); m == "april" ||
+	// 		m == "june" ||
+	// 		m == "september" ||
+	// 		m == "november" {
+	// 		days = 30
+	// 	} else if m == "january" ||
+	// 		m == "march" ||
+	// 		m == "may" ||
+	// 		m == "july" ||
+	// 		m == "august" ||
+	// 		m == "october" ||
+	// 		m == "december" {
+	// 		days = 31
+	// 	} else if m == "february" {
+	// 		if leap {
+	// 			days = 29
+	// 		}
+	// 	} else {
+	// 		fmt.Printf("%q is not a month.\n", month)
+	// 		return
+	// 	}
+
+	// 	fmt.Printf("%q has %d days.\n", month, days)
+	// }
+
+	switch m := strings.ToLower(month); m {
+	case "april", "june", "september", "november":
+		fmt.Println("days = 30")
+	case "january", "march", "may", "july", "august", "october", "december":
+		fmt.Println("days = 30")
+	case "februry":
+		if leap{
+			days =29
+		}
+	default:
+		fmt.Printf("%q has %d days.\n", month, days)
+	}
+		
+
+	//||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+	// h := time.Now().Hour()
+	// fmt.Println("current time is", h)
+
+	// switch {
+	// case h < 12:
+	// 	fmt.Printf("Good morning")
+	// case h >= 12:
+	// 	fmt.Printf("Good afternoon")
+	// case h >= 18:
+	// 	fmt.Printf("good evening")
+	// default:
+	// 	fmt.Printf("good night")
+	// }
+	// FALLTHROUGH KEYWORD
+	// i := 142
+	// switch {
+	// case i > 100:
+	// 	fmt.Printf("big")
+	// 	fallthrough
+	// case i > 0:
+	// 	fmt.Printf("positive")
+	// 	fallthrough
+	// default:
+	// 	fmt.Printf("number")
+	// }
+	// i := -10
+
+	// switch  {
+	// case i > 0:
+	// 	fmt.Printf("positive")
+	// case i < 0:
+	// 	fmt.Printf("negative")
+	// default:
+	// 	fmt.Printf("zero")
+	// }
+
+	// city := os.Args[1]
+
+	// switch city {
+	// case "Abuja":
+	// 	fmt.Printf("nigeria")
+	// case "Accra":
+	// 	fmt.Printf("Ghana")
+	// default:
+	// 	fmt.Printf("where?")
+	// }
 
 	/////////////////////////////////////////////////////////////////////////////////////////////
 	// HANDLING ERROR EXERCISES
@@ -613,7 +918,7 @@ func main() {
 	// fmt.Println(color)
 
 	// speed := 100
-	// force := 2.5
+	// force := 2
 
 	// // type conversion
 	// speed = int(float64(speed) * force)
