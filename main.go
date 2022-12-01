@@ -2,20 +2,38 @@ package main
 
 // import (
 // 	"fmt"
-// 	"os"
+// 	"math/rand"
+// 	"time"
 // )
 
-// func main() {
-// 	var sum int
-// 	for i := 1; i <= 10; i++ {
-// 		sum += 1
-// 		fmt.Println("sum:", sum)
-// 	}
+func main() {
+
+	//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+	// RANDOMNIZATION
+	// t := time.Now() // current time
+
+	// // or rand.Seed(time.Now().UnixNano())
+	
+	// rand.Seed(t.UnixNano()) // seeding time with unixnano time
+	
+	// guess := 10
+
+	// for n := 0; n != guess; {
+	// 	n = rand.Intn(guess + 1)
+	// 	fmt.Printf("%d ", n)
+	// }
+	// fmt.Println()
+	//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+	// 	var sum int
+	// 	for i := 1; i <= 10; i++ {
+	// 		sum += 1
+	// 		fmt.Println("sum:", sum)
+	// 	}
 	// RANGING
 	//  for _, v := range os.Args[1:] {
 	// 	fmt.Printf("%q\n", v)
 	//  }
-
 
 	//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 	// MULTIPLICATION TABLE
@@ -956,7 +974,6 @@ package main
 	// color := "green"
 	// color = "blue"
 	// fmt.Println(color)
-
 	// speed := 100
 	// // type conversion
 	// speed = int(float64(speed) * force)
