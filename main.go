@@ -5,7 +5,12 @@ package main
 // 	"os"
 // )
 
-func main() {
+// func main() {
+// 	var sum int
+// 	for i := 1; i <= 10; i++ {
+// 		sum += 1
+// 		fmt.Println("sum:", sum)
+// 	}
 	// RANGING
 	//  for _, v := range os.Args[1:] {
 	// 	fmt.Printf("%q\n", v)
