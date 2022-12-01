@@ -1,12 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"os"
-	"strings"
-	"time"
-)
-
 func main() {
 	/////////////////////////////////////////////////////////////////////////////////
 	// SWITCH EXERCISES
@@ -210,15 +203,15 @@ func main() {
 	//  "Print the number of days in a given month."
 	//
 	//  Use a switch statement instead of if statements.
-	if len(os.Args) != 2 {
-		fmt.Println("Give me a month name")
-		return
-	}
+	// if len(os.Args) != 2 {
+	// 	fmt.Println("Give me a month name")
+	// 	return
+	// }
 
-	year := time.Now().Year()
-	leap := year%4 == 0 && (year%100 != 0 || year%400 == 0)
+	// year := time.Now().Year()
+	// leap := year%4 == 0 && (year%100 != 0 || year%400 == 0)
 
-	days, month := 28, os.Args[1]
+	// days, month := 28, os.Args[1]
 
 	// 	if m := strings.ToLower(month); m == "april" ||
 	// 		m == "june" ||
