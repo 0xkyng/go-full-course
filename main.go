@@ -1,6 +1,49 @@
 package main
 
+// import (
+// 	"fmt"
+// 	"os"
+// )
+
 func main() {
+	// RANGING
+	//  for _, v := range os.Args[1:] {
+	// 	fmt.Printf("%q\n", v)
+	//  }
+
+
+	//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	// MULTIPLICATION TABLE
+	// const max = 5
+	// fmt.Printf("%5s", "X")
+	// for i := 0; i <= max; i++ {
+	// 	fmt.Printf("%5d", i)
+	// }
+	// fmt.Println()
+	// for i := 0; i <= max; i++ {
+	// 	fmt.Printf("%5d", i)
+
+	// 	for j := 0; j <= max; j++ {
+	// 		fmt.Printf("%5d",i*j)
+	// 	}
+	// 	fmt.Println()
+	// }
+	//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+	// var (
+	//  sum int
+	// 	i = 1
+	// )
+
+	// for {
+	// 	if i > 5{
+	// 		break
+	// 	}
+	// 	sum += 1
+	// 	i++
+	// }
+	// fmt. Println(sum)
+
 	/////////////////////////////////////////////////////////////////////////////////
 	// SWITCH EXERCISES
 
@@ -238,19 +281,18 @@ func main() {
 	// 	fmt.Printf("%q has %d days.\n", month, days)
 	// }
 
-	switch m := strings.ToLower(month); m {
-	case "april", "june", "september", "november":
-		fmt.Println("days = 30")
-	case "january", "march", "may", "july", "august", "october", "december":
-		fmt.Println("days = 30")
-	case "februry":
-		if leap{
-			days =29
-		}
-	default:
-		fmt.Printf("%q has %d days.\n", month, days)
-	}
-		
+	// switch m := strings.ToLower(month); m {
+	// case "april", "june", "september", "november":
+	// 	fmt.Println("days = 30")
+	// case "january", "march", "may", "july", "august", "october", "december":
+	// 	fmt.Println("days = 30")
+	// case "februry":
+	// 	if leap{
+	// 		days =29
+	// 	}
+	// default:
+	// 	fmt.Printf("%q has %d days.\n", month, days)
+	// }
 
 	//||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
@@ -911,8 +953,6 @@ func main() {
 	// fmt.Println(color)
 
 	// speed := 100
-	// force := 2
-
 	// // type conversion
 	// speed = int(float64(speed) * force)
 	// fmt.Println(speed)
