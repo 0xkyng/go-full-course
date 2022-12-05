@@ -1,12 +1,26 @@
 package main
 
-// import (
-// 	"fmt"
-// 	"math/rand"
-// 	"time"
-// )
 
 func main() {
+	// ARRAYS.
+	// var books [4]string
+	// books[0] = "Kafka's Revenge"
+	// books[1] = "stay golden"
+	// books[2] = "Everythingship"
+	// books[3] = "kafka's revenge 2nd edition"
+// const (
+// 	winter = 1
+// 	summer = 3
+// 	yearly = winter + summer
+// )
+// 	// Array Literal
+// 	books := [yearly] string{
+// 		"Kafka's Revenge",
+// 		"stay golden",
+// 		"Everythingship",
+// 		"Kafaka's Revenge 2nd edition",
+// 	}
+// 	fmt.Println(books)
 
 	//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 	// RANDOMNIZATION
