@@ -1,6 +1,5 @@
 package main
 
-
 func main() {
 	// ARRAYS.
 	// var books [4]string
@@ -74,7 +73,7 @@ func main() {
 	// 		{5, 6, 1},
 	// 		{9, 8, 4},
 	// 	}
-	
+
 	// 	var sum float64
 	// 	for _, grades := range students {
 	// 		for _, grades := range grades {
@@ -83,6 +82,36 @@ func main() {
 	// 	}
 	// 	const N = float64(len(students) * len(students[0]))
 	// 	fmt.Printf("Average Grade: %g\n", sum/N)
+
+	// MOODLY CHALLENGE
+	// args := os.Args[1:]
+
+	// if len(args) != 2 {
+	// 	fmt.Println("[your name] [positive|negative]")
+	// 	return
+	// }
+	// name, mood := args[0], args[1]
+
+	// moods := [...][3]string{
+	// 	{ "feels awesome",
+	// 	"feels happy",
+	// 	"feels good",
+	// 	},
+
+	// 	{"feels  sad", 
+	// 	"feels terrible", 
+	// 	"feels bad"},
+	// }
+		
+	// var mi int
+	// if mood != "positive" {
+	// 	mi = 1
+	// } 
+
+	// rand.Seed(time.Now().UnixNano())
+	// n := rand.Intn(len(moods[0]))
+
+	// fmt.Printf("%s feels %s\n", name, moods[mi] [n])
 
 	//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 	// RANDOMNIZATION
