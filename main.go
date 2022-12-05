@@ -1,6 +1,5 @@
 package main
 
-
 func main() {
 	// ARRAYS.
 	// var books [4]string
@@ -8,28 +7,49 @@ func main() {
 	// books[1] = "stay golden"
 	// books[2] = "Everythingship"
 	// books[3] = "kafka's revenge 2nd edition"
-// const (
-// 	winter = 1
-// 	summer = 3
-// 	yearly = winter + summer
-// )
-// 	// Array Literal
-// 	books := [yearly] string{
-// 		"Kafka's Revenge",
-// 		"stay golden",
-// 		"Everythingship",
-// 		"Kafaka's Revenge 2nd edition",
-// 	}
-// 	fmt.Println(books)
+	// const (
+	// 	winter = 1
+	// 	summer = 3
+	// 	yearly = winter + summer
+	// )
+	// 	// Array Literal
+	// 	books := [yearly] string{
+	// 		"Kafka's Revenge",
+	// 		"stay golden",
+	// 		"Everythingship",
+	// 		"Kafaka's Revenge 2nd edition",
+	// 	}
+	// 	fmt.Println(books)
+
+	// args := os.Args[1:]
+
+	// if len(args) != 1 {
+	// 	fmt.Println("[your name]")
+	// 	return
+	// }
+	// name := args[0]
+
+	// moods := [...]string{
+	// 	"feels  sad",
+	// 	"feels terrible",
+	// 	"feels awesome",
+	// 	"feels happy",
+	// 	"feels good",
+	// }
+
+	// rand.Seed(time.Now().UnixNano())
+	// n := rand.Intn(len(moods))
+
+	// fmt.Printf("%s feels %s\n", name, moods[n])
 
 	//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 	// RANDOMNIZATION
 	// t := time.Now() // current time
 
 	// // or rand.Seed(time.Now().UnixNano())
-	
+
 	// rand.Seed(t.UnixNano()) // seeding time with unixnano time
-	
+
 	// guess := 10
 
 	// for n := 0; n != guess; {
@@ -987,7 +1007,7 @@ func main() {
 
 	// color := "green"
 	// color = "blue"
-	// fmt.Println(color)
+	// fmt.Println(color
 	// speed := 100
 	// // type conversion
 	// speed = int(float64(speed) * force)
