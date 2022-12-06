@@ -1,6 +1,17 @@
 package main
 
+import s "github.com/inancgumus/prettyslice"
+
 func main() {
+	var todo []string
+	
+	todo = append(todo, "sing", "play", "code")
+
+	tomorrow := []string{"see mom", "learn go"}
+	todo = append(todo, tomorrow...)
+
+	s.Show("todo",todo)
+
 	// ARRAYS.
 	// var books [4]string
 	// books[0] = "Kafka's Revenge"
