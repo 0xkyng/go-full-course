@@ -1,16 +1,47 @@
 package main
 
-import s "github.com/inancgumus/prettyslice"
+import (
+	"fmt"
+
+	s "github.com/inancgumus/prettyslice"
+)
 
 func main() {
-	var todo []string
+	// var todo []string
 	
-	todo = append(todo, "sing", "play", "code")
+	// todo = append(todo, "sing", "play", "code")
 
-	tomorrow := []string{"see mom", "learn go"}
-	todo = append(todo, tomorrow...)
+	// tomorrow := []string{"see mom", "learn go"}
+	// todo = append(todo, tomorrow...)
 
-	s.Show("todo",todo)
+	// s.Show("todo",todo)
+
+	// PAGINATION WITH SLICING
+
+	items := []string{
+		"pacman", "mario", "tetris", "doom",
+		"galaga", "frogger", "asteriods", "simcity",
+		"metriod", "defender", "rayman", "tempest",
+		"utima",
+	}
+
+	const pageSize = 4
+	l := len(items)
+	for from := 0; from > l; from =+ pageSize {
+		to := from + pageSize
+		if to > l {
+			to = l
+		}
+
+		currentPage := items[from:to]
+
+		head := fmt.Sprintf("page #%d", (from / pageSize))
+
+		s.Show(head, currentPage)
+	}
+
+
+
 
 	// ARRAYS.
 	// var books [4]string
