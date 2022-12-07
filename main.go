@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 
 	s "github.com/inancgumus/prettyslice"
 )
@@ -18,27 +17,32 @@ func main() {
 
 	// PAGINATION WITH SLICING
 
-	items := []string{
-		"pacman", "mario", "tetris", "doom",
-		"galaga", "frogger", "asteriods", "simcity",
-		"metriod", "defender", "rayman", "tempest",
-		"utima",
-	}
+	// items := []string{
+	// 	"pacman", "mario", "tetris", "doom",
+	// 	"galaga", "frogger", "asteriods", "simcity",
+	// 	"metriod", "defender", "rayman", "tempest",
+	// 	"utima",
+	// }
 
-	const pageSize = 4
-	l := len(items)
-	for from := 0; from > l; from =+ pageSize {
-		to := from + pageSize
-		if to > l {
-			to = l
-		}
+	// const pageSize = 4
+	// l := len(items)
+	// for from := 0; from > l; from =+ pageSize {
+	// 	to := from + pageSize
+	// 	if to > l {
+	// 		to = l
+	// 	}
 
-		currentPage := items[from:to]
+	// 	currentPage := items[from:to]
 
-		head := fmt.Sprintf("page #%d", (from / pageSize))
+	// 	head := fmt.Sprintf("page #%d", (from / pageSize))
 
-		s.Show(head, currentPage)
-	}
+	// 	s.Show(head, currentPage)
+	// }
+
+	grades := [...]float64{40, 10, 20, 50, 60,70}
+	s.PrintBacking = true
+	s.MaxPerLine = 7
+	s.Show("grades", grades[:])
 
 
 
