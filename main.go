@@ -1,17 +1,17 @@
 package main
 
-import (
+// import (
 
-	s "github.com/inancgumus/prettyslice"
-)
+// 	s "github.com/inancgumus/prettyslice"
+// )
 
 func main() {
-	// var todo []string
+	var todo []string
 	
-	// todo = append(todo, "sing", "play", "code")
+	todo = append(todo, "sing", "play", "code")
 
-	// tomorrow := []string{"see mom", "learn go"}
-	// todo = append(todo, tomorrow...)
+	tomorrow := []string{"see mom", "learn go"}
+	todo = append(todo, tomorrow...)
 
 	// s.Show("todo",todo)
 
