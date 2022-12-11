@@ -1,19 +1,36 @@
 package main
 
+import "fmt"
+
 // import (
 
 // 	s "github.com/inancgumus/prettyslice"
 // )
 
 func main() {
-	var todo []string
 	
-	todo = append(todo, "sing", "play", "code")
+	spendings := [][] int{
+		{200, 100},
+		{500},
+		{50, 25, 75},
+	}
 
-	tomorrow := []string{"see mom", "learn go"}
-	todo = append(todo, tomorrow...)
+	for i, daily := range spendings {
+		var total int
 
-	// s.Show("todo",todo)
+		for _, spending  := range  daily {
+			total += spending
+		}
+		fmt.Printf("Day %d: %d\n", i+1, total)
+	}
+	// var todo []string
+	
+	// todo = append(todo, "sing", "play", "code")
+
+	// tomorrow := []string{"see mom", "learn go"}
+	// todo = append(todo, tomorrow...)
+
+	// s.Show("todo",todo)   
 
 	// PAGINATION WITH SLICING
 
@@ -39,10 +56,10 @@ func main() {
 	// 	s.Show(head, currentPage)
 	// }
 
-	grades := [...]float64{40, 10, 20, 50, 60,70}
-	s.PrintBacking = true
-	s.MaxPerLine = 7
-	s.Show("grades", grades[:])
+	// grades := [...]float64{40, 10, 20, 50, 60,70}
+	// s.PrintBacking = true
+	// s.MaxPerLine = 7
+	// s.Show("grades", grades[:])
 
 
 
