@@ -500,19 +500,19 @@ func main() {
 
 	//||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-	// h := time.Now().Hour()
-	// fmt.Println("current time is", h)
+	h := time.Now().Hour()
+	fmt.Println("current time is", h)
 
-	// switch {
-	// case h < 12:
-	// 	fmt.Printf("Good morning")
-	// case h >= 12:
-	// 	fmt.Printf("Good afternoon")
-	// case h >= 18:
-	// 	fmt.Printf("good evening")
-	// default:
-	// 	fmt.Printf("good night")
-	// }
+	switch {
+	case h < 12:
+		fmt.Printf("Good morning")
+	case h >= 12:
+		fmt.Printf("Good afternoon")
+	case h >= 18:
+		fmt.Printf("good evening")
+	default:
+		fmt.Printf("good night")
+	}
 	// FALLTHROUGH KEYWORD
 	// i := 142
 	// switch {
