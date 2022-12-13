@@ -12,7 +12,32 @@ import "fmt"
 
 
 func main() {
+	phones := map[string]string{
+		"bowen": "202-555-0179",
+		"dulin": "03.37.77.63.06",
+		"greco": "03489940240",
+	}
+
+	products := map[int]bool{
+		617841573: true,
+		879401371: false,
+		576872813: true,
+	}
+
+	multiPhones := map[string][]string{
+		"bowen": {"202-555-0179"},
+		"dulin": {"03.37.77.63.06", "03.37.70.50.05", "02.20.40.10.04"},
+		"greco": {"03489940240", "03489900120"},
+	}
+
+	basket := map[int]map[int]int{
+		100: {617841573: 4, 576872813: 2},
+		101: {576872813: 5, 657473833: 20},
+		102: {},
+	}
 	
+
+
 	// spendings := [][] int{
 	// 	{200, 100},
 	// 	{500},
@@ -500,19 +525,19 @@ func main() {
 
 	//||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-	h := time.Now().Hour()
-	fmt.Println("current time is", h)
+	// h := time.Now().Hour()
+	// fmt.Println("current time is", h)
 
-	switch {
-	case h < 12:
-		fmt.Printf("Good morning")
-	case h >= 12:
-		fmt.Printf("Good afternoon")
-	case h >= 18:
-		fmt.Printf("good evening")
-	default:
-		fmt.Printf("good night")
-	}
+	// switch {
+	// case h < 12:
+	// 	fmt.Printf("Good morning")
+	// case h >= 12:
+	// 	fmt.Printf("Good afternoon")
+	// case h >= 18:
+	// 	fmt.Printf("good evening")
+	// default:
+	// 	fmt.Printf("good night")
+	// }
 	// FALLTHROUGH KEYWORD
 	// i := 142
 	// switch {
