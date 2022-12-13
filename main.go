@@ -2,41 +2,56 @@ package main
 
 import "fmt"
 
-// import (
-
-// 	s "github.com/inancgumus/prettyslice"
-// )
-
-// func fetch() [][]int {
-// 	return nil
-
-
 func main() {
-	phones := map[string]string{
-		"bowen": "202-555-0179",
-		"dulin": "03.37.77.63.06",
-		"greco": "03489940240",
+	//---------------------------------------------------------------------------------------
+	// STRUCTS
+
+	type person struct {
+		name     string
+		lastname string
+		age      int
 	}
 
-	products := map[int]bool{
-		617841573: true,
-		879401371: false,
-		576872813: true,
+
+	isaac := person {
+	name : "Isaac",
+	lastname : "wanger",
+	age: 24,
 	}
 
-	multiPhones := map[string][]string{
-		"bowen": {"202-555-0179"},
-		"dulin": {"03.37.77.63.06", "03.37.70.50.05", "02.20.40.10.04"},
-		"greco": {"03489940240", "03489900120"},
+	chris := person {
+		"chris",
+		"imoni",
+		20,
 	}
 
-	basket := map[int]map[int]int{
-		100: {617841573: 4, 576872813: 2},
-		101: {576872813: 5, 657473833: 20},
-		102: {},
-	}
-	
 
+	fmt.Printf("\nisaac: %+v\n", isaac)
+	fmt.Printf("\nchris: %+v\n", chris)
+	//---------------------------------------------------------------------------------------
+	// phones := map[string]string{
+	// 	"bowen": "202-555-0179",
+	// 	"dulin": "03.37.77.63.06",
+	// 	"greco": "03489940240",
+	// }
+
+	// products := map[int]bool{
+	// 	617841573: true,
+	// 	879401371: false,
+	// 	576872813: true,
+	// }
+
+	// multiPhones := map[string][]string{
+	// 	"bowen": {"202-555-0179"},
+	// 	"dulin": {"03.37.77.63.06", "03.37.70.50.05", "02.20.40.10.04"},
+	// 	"greco": {"03489940240", "03489900120"},
+	// }
+
+	// basket := map[int]map[int]int{
+	// 	100: {617841573: 4, 576872813: 2},
+	// 	101: {576872813: 5, 657473833: 20},
+	// 	102: {},
+	// }
 
 	// spendings := [][] int{
 	// 	{200, 100},
@@ -52,7 +67,6 @@ func main() {
 	// spendings = append(spendings, []int{95, 10}, []int{50, 25})
 	// spendings := fetch()
 
-
 	// for i, daily := range spendings {
 	// 	var total int
 
@@ -60,15 +74,15 @@ func main() {
 	// 		total += spending
 	// 	}
 	// 	fmt.Printf("Day %d: %d\n", i+1, total)
-	}
+	// }
 	// var todo []string
-	
+
 	// todo = append(todo, "sing", "play", "code")
 
 	// tomorrow := []string{"see mom", "learn go"}
 	// todo = append(todo, tomorrow...)
 
-	// s.Show("todo",todo)   
+	// s.Show("todo",todo)
 
 	// PAGINATION WITH SLICING
 
@@ -98,9 +112,6 @@ func main() {
 	// s.PrintBacking = true
 	// s.MaxPerLine = 7
 	// s.Show("grades", grades[:])
-
-
-
 
 	// ARRAYS.
 	// var books [4]string
@@ -199,15 +210,15 @@ func main() {
 	// 	"feels good",
 	// 	},
 
-	// 	{"feels  sad", 
-	// 	"feels terrible", 
+	// 	{"feels  sad",
+	// 	"feels terrible",
 	// 	"feels bad"},
 	// }
-		
+
 	// var mi int
 	// if mood != "positive" {
 	// 	mi = 1
-	// } 
+	// }
 
 	// rand.Seed(time.Now().UnixNano())
 	// n := rand.Intn(len(moods[0]))
@@ -1179,7 +1190,7 @@ func main() {
 
 	// color := "green"
 	// color = "blue"
-	// fmt.Println(color
+	// fmt.Println(col
 	// speed := 100
 	// // type conversion
 	// speed = int(float64(speed) * force)
