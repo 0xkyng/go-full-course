@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"encoding/json"
+	"fmt"
+)
 
 func main() {
 	//---------------------------------------------------------------------------------------
@@ -29,25 +32,45 @@ func main() {
 	// fmt.Printf("\nchris: %+v\n", chris)
 
 	// EMBEDED STRUCTS
+	// type text struct {
+	// 	title string
+	// 	words int
+	// }
 
-	type text struct {
-		title string
-		words int
+	// type book struct {
+	// 	text text
+	// 	isbn string
+	// }
+
+	// gopher := book {
+	// 	text: text{
+	// 		title: "gopher",
+	// 		words: 235465,
+	// 	},
+	// 	isbn: "2353564",
+	// }
+	// fmt.Printf("%s has %d words (isbn: %s)\n", gopher.text.title, gopher.text.words, gopher.isbn)
+
+	// Encoding values to json
+	type permisions map[string]bool
+	type user struct {
+		Name string            `json:"username"`
+		Pasword string         `json:"-"` // Prevent password encoding
+		Permisions permisions  `json:"perms,omitempty"`
 	}
 
-	type book struct {
-		text text
-		isbn string
+	users := []user {
+		{"isaac", "1234", nil},
+		{"chris", "0123", permisions{"admin": true}},
+		{"james", "0143", permisions{"admin": true}},
 	}
 
-	gopher := book {
-		text: text{
-			title: "gopher",
-			words: 235465,
-		},
-		isbn: "2353564",
+	out, err := json.MarshalIndent(users, "", "\t")
+	if err != nil {
+		fmt.Println(err)
+		return
 	}
-	fmt.Printf("%s has %d words (isbn: %s)\n", gopher.text.title, gopher.text.words, gopher.isbn)
+	fmt.Println(string(out))
 	//---------------------------------------------------------------------------------------
 	// phones := map[string]string{
 	// 	"bowen": "202-555-0179",
