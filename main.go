@@ -36,17 +36,18 @@ func main() {
 	}
 
 	type book struct {
-		title string
-		words int
+		text text
 		isbn string
 	}
 
 	gopher := book {
-		title: "gopher",
-		words: 28346,
+		text: text{
+			title: "gopher",
+			words: 235465,
+		},
 		isbn: "2353564",
 	}
-	fmt.Printf("%s has %d words (isbn: %s)\n", gopher.title, gopher.words, gopher.isbn)
+	fmt.Printf("%s has %d words (isbn: %s)\n", gopher.text.title, gopher.text.words, gopher.isbn)
 	//---------------------------------------------------------------------------------------
 	// phones := map[string]string{
 	// 	"bowen": "202-555-0179",
