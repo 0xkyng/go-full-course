@@ -1,8 +1,11 @@
 package main
 
 import (
+	"bufio"
 	"encoding/json"
 	"fmt"
+	"os"
+	"os/user"
 )
 
 func main() {
@@ -14,7 +17,6 @@ func main() {
 	// 	lastname string
 	// 	age      int
 	// }
-
 
 	// isaac := person {
 	// name : "Isaac",
@@ -52,25 +54,65 @@ func main() {
 	// fmt.Printf("%s has %d words (isbn: %s)\n", gopher.text.title, gopher.text.words, gopher.isbn)
 
 	// Encoding values to json
-	type permisions map[string]bool
+	// type permisions map[string]bool
+	// type user struct {
+	// 	Name string            `json:"username"`
+	// 	Pasword string         `json:"-"` // Prevent password encoding
+	// 	Permisions permisions  `json:"perms,omitempty"`
+	// }
+
+	// users := []user {
+	// 	{"isaac", "1234", nil},
+	// 	{"chris", "0123", permisions{"admin": true}},
+	// 	{"james", "0143", permisions{"admin": true}},
+	// }
+
+	// out, err := json.MarshalIndent(users, "", "\t")
+	// if err != nil {
+	// 	fmt.Println(err)
+	// 	return
+	// }
+	// fmt.Println(string(out))
+
+	// JSON DECODING
+	// 1. Read the encoded json into a []byte
+	var input []byte
+
+	// use a scaner to read the json from the file
+	for in := bufio.NewScanner(os.Stdin); in.Scan(); {
+		input = append(input, in.Bytes()...)
+	}
+
+	// 2. Decode the json into a []user
+	// Decode the users into a []user
+	var users []user
 	type user struct {
-		Name string            `json:"username"`
-		Pasword string         `json:"-"` // Prevent password encoding
-		Permisions permisions  `json:"perms,omitempty"`
+		Name string                 `json:"username"`
+		Permisions map[string]bool  `json:"perms"`
 	}
 
-	users := []user {
-		{"isaac", "1234", nil},
-		{"chris", "0123", permisions{"admin": true}},
-		{"james", "0143", permisions{"admin": true}},
-	}
-
-	out, err := json.MarshalIndent(users, "", "\t")
+	err := json.Unmarshal(input, &users)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
-	fmt.Println(string(out))
+
+	// Print the decoded value by ranging over users slice and print the username
+	for _, user := range users {
+		fmt.Print("+ ", user.Name)
+
+		// save the permission to the p variable using switch
+		switch p := user.Permisions; {
+		case p == nil:
+			fmt.Print("Has no power")
+		case p["admin"]:
+			fmt.Print("is an admin")
+		case p["write"]:
+			fmt.Print("can write.")
+		}
+		fmt.Println()
+	}
+
 	//---------------------------------------------------------------------------------------
 	// phones := map[string]string{
 	// 	"bowen": "202-555-0179",
@@ -1233,7 +1275,7 @@ func main() {
 
 	// color := "green"
 	// color = "blue"
-	// fmt.Println(col
+	// fmt.Println
 	// speed := 100
 	// // type conversion
 	// speed = int(float64(speed) * force)
