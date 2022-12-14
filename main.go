@@ -6,28 +6,47 @@ func main() {
 	//---------------------------------------------------------------------------------------
 	// STRUCTS
 
-	type person struct {
-		name     string
-		lastname string
-		age      int
+	// type person struct {
+	// 	name     string
+	// 	lastname string
+	// 	age      int
+	// }
+
+
+	// isaac := person {
+	// name : "Isaac",
+	// lastname : "wanger",
+	// age: 24,
+	// }
+
+	// chris := person {
+	// 	"chris",
+	// 	"imoni",
+	// 	20,
+	// }
+
+	// fmt.Printf("\nisaac: %+v\n", isaac)
+	// fmt.Printf("\nchris: %+v\n", chris)
+
+	// EMBEDED STRUCTS
+
+	type text struct {
+		title string
+		words int
 	}
 
-
-	isaac := person {
-	name : "Isaac",
-	lastname : "wanger",
-	age: 24,
+	type book struct {
+		title string
+		words int
+		isbn string
 	}
 
-	chris := person {
-		"chris",
-		"imoni",
-		20,
+	gopher := book {
+		title: "gopher",
+		words: 28346,
+		isbn: "2353564",
 	}
-
-
-	fmt.Printf("\nisaac: %+v\n", isaac)
-	fmt.Printf("\nchris: %+v\n", chris)
+	fmt.Printf("%s has %d words (isbn: %s)\n", gopher.title, gopher.words, gopher.isbn)
 	//---------------------------------------------------------------------------------------
 	// phones := map[string]string{
 	// 	"bowen": "202-555-0179",
