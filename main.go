@@ -7,7 +7,13 @@ func main() {
 		price: 10,
 	}
 
-	printBook(isaac)
+	gamer := game{
+		title: "zik game",
+		price: 20,
+	}
+
+	isaac.print()
+	gamer.print()
 }
 
 

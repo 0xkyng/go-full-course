@@ -7,6 +7,6 @@ type book struct {
 	price float64
 }
 
-func printBook(b book) {
+func (b book) print() {
 	fmt.Printf("%-15s: $%.2f\n", b.title, b.price)
 }
