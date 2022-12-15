@@ -1,14 +1,20 @@
 package main
 
-import (
-	"bufio"
-	"encoding/json"
-	"fmt"
-	"os"
-	"os/user"
-)
-
 func main() {
+	///////////////////////////////////////////////////////////////////////////////////////////
+	// POINTERS
+	// var (
+	// 	counter int
+	// 	v       int
+	// 	p       *int
+	// )
+	// counter = 100
+	// p = &counter
+	// v = *p
+	// fmt.Printf("counter: %-13d addr:  %-13p\n", counter, &counter)
+	// fmt.Printf("p: %-13d addr:  %-13p *p: %-13d\n", p, &p, *p)
+	// fmt.Print(v)
+	//////////////////////////////////////////////////////////////////////////////////////////
 	//---------------------------------------------------------------------------------------
 	// STRUCTS
 
@@ -76,42 +82,42 @@ func main() {
 
 	// JSON DECODING
 	// 1. Read the encoded json into a []byte
-	var input []byte
+	// var input []byte
 
-	// use a scaner to read the json from the file
-	for in := bufio.NewScanner(os.Stdin); in.Scan(); {
-		input = append(input, in.Bytes()...)
-	}
+	// // use a scaner to read the json from the file
+	// for in := bufio.NewScanner(os.Stdin); in.Scan(); {
+	// 	input = append(input, in.Bytes()...)
+	// }
 
-	// 2. Decode the json into a []user
-	// Decode the users into a []user
-	var users []user
-	type user struct {
-		Name string                 `json:"username"`
-		Permisions map[string]bool  `json:"perms"`
-	}
+	// // 2. Decode the json into a []user
+	// // Decode the users into a []user
+	// var users []user
+	// type user struct {
+	// 	Name string                 `json:"username"`
+	// 	Permisions map[string]bool  `json:"perms"`
+	// }
 
-	err := json.Unmarshal(input, &users)
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
+	// err := json.Unmarshal(input, &users)
+	// if err != nil {
+	// 	fmt.Println(err)
+	// 	return
+	// }
 
-	// Print the decoded value by ranging over users slice and print the username
-	for _, user := range users {
-		fmt.Print("+ ", user.Name)
+	// // Print the decoded value by ranging over users slice and print the username
+	// for _, user := range users {
+	// 	fmt.Print("+ ", user.Name)
 
-		// save the permission to the p variable using switch
-		switch p := user.Permisions; {
-		case p == nil:
-			fmt.Print("Has no power")
-		case p["admin"]:
-			fmt.Print("is an admin")
-		case p["write"]:
-			fmt.Print("can write.")
-		}
-		fmt.Println()
-	}
+	// 	// save the permission to the p variable using switch
+	// 	switch p := user.Permisions; {
+	// 	case p == nil:
+	// 		fmt.Print("Has no power")
+	// 	case p["admin"]:
+	// 		fmt.Print("is an admin")
+	// 	case p["write"]:
+	// 		fmt.Print("can write.")
+	// 	}
+	// 	fmt.Println()
+	// }
 
 	//---------------------------------------------------------------------------------------
 	// phones := map[string]string{
@@ -1275,7 +1281,7 @@ func main() {
 
 	// color := "green"
 	// color = "blue"
-	// fmt.Println
+	// fmt.Print
 	// speed := 100
 	// // type conversion
 	// speed = int(float64(speed) * force)
