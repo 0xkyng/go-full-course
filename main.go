@@ -1,9 +1,16 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
+
+func main() {
+	isaac := book{
+		title: "isaac codes",
+		price: 10,
+	}
+
+	printBook(isaac)
+}
+
+
 
 // func main() {
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -1353,21 +1360,21 @@ import (
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 // Pointers with struct
-func main() {
-	structs()
-}
+// func main() {
+// 	structs()
+// }
 
-type house struct {
-	name string
-	rooms int
-}
+// type house struct {
+// 	name string
+// 	rooms int
+// }
 
-func structs(){
-	myHouse := house{name: "My House", rooms: 5}
-	addRoom(&myHouse)
-}
+// func structs(){
+// 	myHouse := house{name: "My House", rooms: 5}
+// 	addRoom(&myHouse)
+// }
 
-func addRoom(h *house) {
-	h.rooms++
-}
+// func addRoom(h *house) {
+// 	h.rooms++
+// }
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
