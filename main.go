@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 // func main() {
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -1327,3 +1330,23 @@ import "fmt"
 // 	}
 // }
 ///////////////////////////////////////////////////////////////////////////////////////////
+
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// Pointers to slices
+func main(){
+	slices()
+}
+
+func slices() {
+	dirs := []string{"up", "down", "left"," right"}
+	up(dirs)
+	fmt.Println(dirs)
+}
+
+func up(list []string) {
+	for i := range list {
+		list[i] = strings.ToUpper(list[i])
+	}
+}
+// NOTE: DO NOT USE POINTERS WITH SLICES
+//\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
