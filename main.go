@@ -1,23 +1,39 @@
 package main
 
+import "container/list"
 
+//============================================================================================
+// INTERFACE
 func main() {
-	isaac := book{
-		title: "isaac codes",
-		price: 10,
-	}
+	var (
+		skating = book{title: "skating", price: 15}
+		coding = game{title: "coding", price: 30}
+		avatars = game{title: "avatars", price: 45}
+	)
 
-	gamer := game{
-		title: "zik game",
-		price: 20,
-	}
-
-	isaac.print()
-	gamer.print()
+	var store list
+	store = append(store, &coding, &avatars)
+	store.print()
 }
+//============================================================================================
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////
+// func main() {
+// 	isaac := book{
+// 		title: "isaac codes",
+// 		price: 10,
+// 	}
 
+// 	gamer := game{
+// 		title: "zik game",
+// 		price: 20,
+// 	}
+
+// 	isaac.print()
+// 	gamer.print()
+// }
+//////////////////////////////////////////////////////////////////////////////////////////
 // func main() {
 ///////////////////////////////////////////////////////////////////////////////////////////
 // POINTERS
