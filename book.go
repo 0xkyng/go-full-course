@@ -7,14 +7,27 @@ import (
 )
 
 type book struct {
-	title     string
-	price     money
+	// embed the product type into the book type.
+	// all the fields and methods of the product will be
+	// available in this book type.
+	product
 	published interface{}
 }
 
-func (b book) print() {
+// book type's print method takes priority.
+//
+// + when you call it on a book value, the following method will
+//   be executed.
+//
+// + if it wasn't here, the product type's print method would
+//   have been executed.
+func (b *book) print() {
+	// the book can also call the embedded product's print method
+	// if it wants to, as in here:
+	b.product.print()
+
 	p := format(b.published)
-	fmt.Printf("%-15s: %s - (%v)\n", b.title, b.price.string(), p)
+	fmt.Printf("\t - (%v)\n", p)
 }
 
 func format(v interface{}) string {

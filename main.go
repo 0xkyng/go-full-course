@@ -5,17 +5,23 @@ package main
 
 func main() {
 	store := list{
-		book{title: "moby dick", price: 10, published: 118281600},
-		book{title: "odyssey", price: 15, published: "733622400"},
-		book{title: "hobbit", price: 25},
-		puzzle{title: "rubik's cube", price: 5},
-		&game{title: "minecraft", price: 20},
-		&game{title: "tetris", price: 5},
-		&toy{title: "yoda", price: 150},
+		&book{product{"moby dick", 10}, 118281600},
+		&book{product{"odyssey", 15}, "733622400"},
+		&book{product{"hobbit", 25}, nil},
+		&puzzle{product{"rubik's cube", 5}},
+		&game{product{"minecraft", 20}},
+		&game{product{"tetris", 5}},
+		&toy{product{"yoda", 150}},
 	}
 
 	store.discount(.5)
 	store.print()
+
+	// t := &toy{product{"yoda", 150}}
+	// fmt.Printf("%#v\n", t)
+
+	// b := &book{product{"moby dick", 10}, 118281600}
+	// fmt.Printf("%#v\n", b)
 }
 //============================================================================================
 
