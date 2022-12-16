@@ -14,3 +14,4 @@ func (g *game) print() {
 
 func (g *game) discount(ratio float64) {
 	g.price *= money(1 - ratio)
+}
