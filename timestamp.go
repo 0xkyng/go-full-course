@@ -18,6 +18,14 @@ func (ts timestamp) String() string {
 	return ts.Format(layout)
 }
 
+func (ts timestamp) MarshalJSON() (data []byte, _ error) {
+	// ts -> integer -> ts.Unix() -> integer
+	// data <- interger -> strconv.AppendInt(data, integer, 10)
+	return strconv.AppendInt(data, ts.Unix(), 10), nil
+
+
+}
+
 func toTimestamp(v interface{}) (ts timestamp) {
 	var t int
 
