@@ -28,3 +28,20 @@ func (l list) discount(ratio float64) {
 		p.discount(ratio)
 	}
 }
+
+// Len isthe number of elements in the collection
+func (l list) Len() int {
+	return len(l)
+}
+
+// Less reports whether the element with 
+// index i should sort before the element with index j
+func (l list) Less(i, j int) bool {
+	return l[i].title < l[j].title
+}
+
+// Swap swaps the element with indexes i and j
+func (l list) Swap(i, j int) {
+	l[i], l[j] = l[j], l[i]
+}
+

@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 //============================================================================================
 // INTERFACE
@@ -15,11 +18,7 @@ func main() {
 	l.discount(.5)
 	fmt.Print(l)
 
-	// t := &toy{product{"yoda", 150}}
-	// fmt.Printf("%#v\n", t)
-
-	// b := &book{product{"moby dick", 10}, 118281600}
-	// fmt.Printf("%#v\n", b)
+	sort.Sort(l)
 }
 //============================================================================================
 
