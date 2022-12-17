@@ -4,18 +4,14 @@ package main
 // INTERFACE
 
 func main() {
-	store := list{
+	l := list{
 		{title: "moby dick", price:  10, released:  118281600},
 		{title: "odyssey", price:  15, released:  "733622400"}, 
 		{title: "hobbit", price:  25},
-		{title: "rubik's cube", price:  5},
-		{title: "minecraft", price: 20},
-		{title: "tetris", price: 5},
-		{title: "yoda", price:  150},
 	}
 
-	store.discount(.5)
-	store.print()
+	l.discount(.5)
+	l.print()
 
 	// t := &toy{product{"yoda", 150}}
 	// fmt.Printf("%#v\n", t)
