@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 //============================================================================================
 // INTERFACE
 
@@ -11,7 +13,7 @@ func main() {
 	}
 
 	l.discount(.5)
-	l.print()
+	fmt.Print(l)
 
 	// t := &toy{product{"yoda", 150}}
 	// fmt.Printf("%#v\n", t)

@@ -1,20 +1,26 @@
 package main
 
-import "fmt"
+import (
+	"strings"
+)
 
 type list []*product
 
-func (l list) print() {
+func (l list) String() string {
 	if len(l) == 0 {
-		fmt.Println("Sorry. We're waiting for delivery 🚚.")
-		return
+		return "Sorry. We're waiting for delivery 🚚.\n"
+		
 	}
-
+    var str strings.Builder
 	for _, p := range l {
 		// p.print()
-		fmt.Printf("* %s\n", p)
+		// fmt.Printf("* %s\n", p)
+		str.WriteString("* ")
+		str.WriteString(p.String())
+		str.WriteRune('\n')
 
 	}
+	return str.String()
 }
 
 func (l list) discount(ratio float64) {
