@@ -18,6 +18,13 @@ func (ts timestamp) String() string {
 	return ts.Format(layout)
 }
 
+// Unmarshaler
+func (ts *timestamp) UnmarshalJSON(data []byte) error {
+	*ts = toTimestamp(string(data))
+	return nil
+}
+
+// Marshaler
 func (ts timestamp) MarshalJSON() (data []byte, _ error) {
 	// ts -> integer -> ts.Unix() -> integer
 	// data <- interger -> strconv.AppendInt(data, integer, 10)
