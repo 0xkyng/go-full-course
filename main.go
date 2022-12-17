@@ -1,8 +1,10 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
-	"sort"
+	"log"
+	// "sort"
 )
 
 //============================================================================================
@@ -10,15 +12,24 @@ import (
 
 func main() {
 	l := list{
-		{title: "moby dick", price:  10, released:  toTimestamp("118281600")},
-		{title: "odyssey", price:  15, released: toTimestamp("733622400")}, 
-		{title: "hobbit", price:  25},
+		{Title: "moby dick", Price:  10, Released:  toTimestamp("118281600")},
+		{Title: "odyssey", Price:  15, Released: toTimestamp("733622400")}, 
+		{Title: "hobbit", Price:  25},
 	}
 
-	l.discount(.5)
-	fmt.Print(l)
 
-	sort.Sort(l)
+	// sort.Sort(l)
+	// l.discount(.5)
+	// fmt.Print(l)
+
+
+	data, err := json.MarshalIndent(l, "", " ")
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(string(data))
+
+	
 }
 //============================================================================================
 

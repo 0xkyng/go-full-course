@@ -37,7 +37,7 @@ func (l list) Len() int {
 // Less reports whether the element with 
 // index i should sort before the element with index j
 func (l list) Less(i, j int) bool {
-	return l[i].title < l[j].title
+	return l[i].Title < l[j].Title
 }
 
 // Swap swaps the element with indexes i and j
