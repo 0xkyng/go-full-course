@@ -11,7 +11,9 @@ func (l list) print() {
 	}
 
 	for _, p := range l {
-		p.print()
+		// p.print()
+		fmt.Printf("* %s\n", p)
+
 	}
 }
 
