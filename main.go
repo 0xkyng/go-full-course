@@ -59,23 +59,41 @@ import "fmt"
 // }
 //============================================================================================
 func main() {
-	schools := make([]map[int]string, 2)
-	for i := range schools {
-		schools[i] = make(map[int]string)
-	}
+	a, b := 3.14, 6.28
+	swap(&a, &b)
+	fmt.Printf("a : %g — b : %g\n", a, b)
 
-	load(schools[0], []string{"batman", "superman"})
-	load(schools[1], []string{"spiderman", "wonder woman"})
-
-	fmt.Println(schools[0])
-	fmt.Println(schools[1])
+	pa, pb := &a, &b
+	pa, pb = swapAddr(pa, pb)
+	fmt.Printf("pa: %p — pb: %p\n", pa, pb)
+	fmt.Printf("pa: %g — pb: %g\n", *pa, *pb)
 }
 
-func load(m map[int]string, students []string) {
-	for i, name := range students {
-		m[i+1] = name
-	}
+func swap(a, b *float64) {
+	*a, *b = *b, *a
 }
+
+func swapAddr(a, b *float64) (*float64, *float64) {
+	return b, a
+}
+// func main() {
+// 	schools := make([]map[int]string, 2)
+// 	for i := range schools {
+// 		schools[i] = make(map[int]string)
+// 	}
+
+// 	load(schools[0], []string{"batman", "superman"})
+// 	load(schools[1], []string{"spiderman", "wonder woman"})
+
+// 	fmt.Println(schools[0])
+// 	fmt.Println(schools[1])
+// }
+
+// func load(m map[int]string, students []string) {
+// 	for i, name := range students {
+// 		m[i+1] = name
+// 	}
+// }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 // func main() {
