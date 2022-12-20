@@ -1478,10 +1478,6 @@ import "fmt"
 // }
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-package main
-
-import "fmt"
-
 type Person struct {
     Name     string
     Greeting string
